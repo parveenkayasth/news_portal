@@ -19,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/parveenkayasth/news_portal/issues"
   },
-  "homepage": "https://github.com/parveenkayasth/news_portal#readme"
+  "homepage": "https://github.com/parveenkayasth/news_portal#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4"
+  }
 }
