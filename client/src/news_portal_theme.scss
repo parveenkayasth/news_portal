@@ -1,0 +1,125 @@
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+$thea-primary: (
+    50 : #f6fbfb,
+    100 : #e8f5f4,
+    200 : #d9efed,
+    300 : #c9e9e6,
+    400 : #bee4e0,
+    500 : #b2dfdb,
+    600 : #abdbd7,
+    700 : #a2d7d2,
+    800 : #99d2cd,
+    900 : #8acac4,
+    A100 : #ffffff,
+    A200 : #ffffff,
+    A400 : #f6fffe,
+    A700 : #dcfffc,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #000000,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+  )
+);
+
+$thea-accent:(
+    50 : #fffefb,
+    100 : #fffdf6,
+    200 : #fffcf0,
+    300 : #fffaea,
+    400 : #fff9e6,
+    500 : #fff8e1,
+    600 : #fff7dd,
+    700 : #fff6d9,
+    800 : #fff5d5,
+    900 : #fff3cd,
+    A100 : #ffffff,
+    A200 : #ffffff,
+    A400 : #ffffff,
+    A700 : #ffffff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #000000,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+// Define the default theme (same as the example above).
+$theahoel-primary: mat-palette($thea-primary,700,300,900);
+$theahoel-accent:  mat-palette($thea-accent, 500,400,700);
+$theahoel-warn:  mat-palette($thea-primary, 50);
+$theahoel-theme:   mat-light-theme($theahoel-primary, $theahoel-accent,$theahoel-warn);
+
+////////////////////////
+$thea-typography: mat-typography-config(
+  $font-family:   'Rubik,sans-serif',
+  $display-4:     mat-typography-level(112px, 112px, 300),
+  $display-3:     mat-typography-level(56px, 56px, 400),
+  $display-2:     mat-typography-level(45px, 48px, 400),
+  $display-1:     mat-typography-level(34px, 40px, 400),
+  $headline:      mat-typography-level(97.54px, 32px, 400),
+  $title:         mat-typography-level(61px, 0px, 500),
+  $subheading-2:  mat-typography-level(49px,0.25px, 400),
+  $subheading-1:  mat-typography-level(34.54px, 0.25px, 400),
+  $body-2:        mat-typography-level(14.22px, 0.23px, 500),
+  $body-1:        mat-typography-level(16.25px, 20px, 400),
+  $caption:       mat-typography-level(12.19px, 1.25px, 400),
+  $button:        mat-typography-level(14.22px, 1.25px, 500),
+  // Line-height must be unit-less fraction of the font-size.
+  $input:         mat-typography-level(inherit, 1.125, 400)
+);
+
+
+// Override typography CSS classes (e.g., mat-h1, mat-display-1, mat-typography, etc.).
+@include mat-base-typography($thea-typography);
+
+// Override typography for a specific Angular Material components.
+@include mat-checkbox-typography($thea-typography);
+
+// Override typography for all Angular Material, including mat-base-typography and all components.
+@include angular-material-typography($thea-typography);
+
+
+@include mat-core($thea-typography);
+ //////////////////////////
+/*
+
+@import './app/navigation/navtabs/navtabs.component.scss';
+
+@import './app/navigation/sidenav-list/sidenav-list.component.scss';
+*/
+
+// Include the default theme styles.
+@include angular-material-theme($theahoel-theme);
+
+/*@include navtabs-component($theahoel-theme);
+
+@include sidenav-list-component($theahoel-theme);*/
+
+
+
+
