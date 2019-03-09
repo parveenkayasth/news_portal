@@ -5,6 +5,14 @@ const path = require('path');
 const port = 2000;
 const app = express();
 
+
+
+const passport = require("passport");
+const mongoose = require("mongoose");
+const users = require('./routes/users');
+const config = require('./config/database');
+
+
 app.use(express.static(path.join(__dirname,'public')));
 
 

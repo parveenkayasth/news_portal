@@ -2,89 +2,131 @@
 
 @include mat-core();
 
-$thea-primary: (
-    50 : #f6fbfb,
-    100 : #e8f5f4,
-    200 : #d9efed,
-    300 : #c9e9e6,
-    400 : #bee4e0,
-    500 : #b2dfdb,
-    600 : #abdbd7,
-    700 : #a2d7d2,
-    800 : #99d2cd,
-    900 : #8acac4,
-    A100 : #ffffff,
-    A200 : #ffffff,
-    A400 : #f6fffe,
-    A700 : #dcfffc,
-    contrast: (
-        50 : #000000,
-        100 : #000000,
-        200 : #000000,
-        300 : #000000,
-        400 : #000000,
-        500 : #000000,
-        600 : #000000,
-        700 : #000000,
-        800 : #000000,
-        900 : #000000,
-        A100 : #000000,
-        A200 : #000000,
-        A400 : #000000,
-        A700 : #000000,
+
+
+
+$news-primary: (
+  50 : #e5f4f3,
+  100 : #bee4e1,
+  200 : #93d3cd,
+  300 : #67c1b8,
+  400 : #47b3a9,
+  500 : #26a69a,
+  600 : #229e92,
+  700 : #1c9588,
+  800 : #178b7e,
+  900 : #0d7b6c,
+  A100 : #adfff3,
+  A200 : #7affec,
+  A400 : #47ffe4,
+  A700 : #2dffe0,
+  contrast: (
+      50 : #000000,
+      100 : #000000,
+      200 : #000000,
+      300 : #000000,
+      400 : #000000,
+      500 : #ffffff,
+      600 : #ffffff,
+      700 : #ffffff,
+      800 : #ffffff,
+      900 : #ffffff,
+      A100 : #000000,
+      A200 : #000000,
+      A400 : #000000,
+      A700 : #000000,
   )
 );
 
-$thea-accent:(
-    50 : #fffefb,
-    100 : #fffdf6,
-    200 : #fffcf0,
-    300 : #fffaea,
-    400 : #fff9e6,
-    500 : #fff8e1,
-    600 : #fff7dd,
-    700 : #fff6d9,
-    800 : #fff5d5,
-    900 : #fff3cd,
-    A100 : #ffffff,
-    A200 : #ffffff,
-    A400 : #ffffff,
-    A700 : #ffffff,
-    contrast: (
-        50 : #000000,
-        100 : #000000,
-        200 : #000000,
-        300 : #000000,
-        400 : #000000,
-        500 : #000000,
-        600 : #000000,
-        700 : #000000,
-        800 : #000000,
-        900 : #000000,
-        A100 : #000000,
-        A200 : #000000,
-        A400 : #000000,
-        A700 : #000000,
-    )
+
+$news-accent:   (
+  50 : #eaf6f5,
+  100 : #cae9e6,
+  200 : #a6dbd6,
+  300 : #82ccc5,
+  400 : #68c1b8,
+  500 : #4db6ac,
+  600 : #46afa5,
+  700 : #3da69b,
+  800 : #349e92,
+  900 : #258e82,
+  A100 : #cefff9,
+  A200 : #9bfff3,
+  A400 : #68ffec,
+  A700 : #4effe9,
+  contrast: (
+      50 : #000000,
+      100 : #000000,
+      200 : #000000,
+      300 : #000000,
+      400 : #000000,
+      500 : #000000,
+      600 : #000000,
+      700 : #000000,
+      800 : #ffffff,
+      900 : #ffffff,
+      A100 : #000000,
+      A200 : #000000,
+      A400 : #000000,
+      A700 : #000000,
+  )
 );
 
+$news_warn : (
+  50 : #fbecec,
+  100 : #f6d0d0,
+  200 : #f0b1b1,
+  300 : #ea9191,
+  400 : #e67a7a,
+  500 : #e16262,
+  600 : #dd5a5a,
+  700 : #d95050,
+  800 : #d54646,
+  900 : #cd3434,
+  A100 : #ffffff,
+  A200 : #ffe1e1,
+  A400 : #ffaeae,
+  A700 : #ff9595,
+  contrast: (
+      50 : #000000,
+      100 : #000000,
+      200 : #000000,
+      300 : #000000,
+      400 : #000000,
+      500 : #000000,
+      600 : #000000,
+      700 : #ffffff,
+      800 : #ffffff,
+      900 : #ffffff,
+      A100 : #000000,
+      A200 : #000000,
+      A400 : #000000,
+      A700 : #000000,
+  )
+);
+
+
+
+
+
+
 // Define the default theme (same as the example above).
-$theahoel-primary: mat-palette($thea-primary,700,300,900);
-$theahoel-accent:  mat-palette($thea-accent, 500,400,700);
-$theahoel-warn:  mat-palette($thea-primary, 50);
-$theahoel-theme:   mat-light-theme($theahoel-primary, $theahoel-accent,$theahoel-warn);
+$news-portal-primary: mat-palette($news-primary,800);
+$news-portal-accent:  mat-palette($news-accent, 400);
+$news-portal-warn:  mat-palette($news_warn,400);
+$news-portal-theme:   mat-light-theme($news-portal-primary, $news-portal-accent,$news-portal-warn);
 
 ////////////////////////
 $thea-typography: mat-typography-config(
   $font-family:   'Rubik,sans-serif',
-  $display-4:     mat-typography-level(112px, 112px, 300),
-  $display-3:     mat-typography-level(56px, 56px, 400),
+  $display-4:     mat-typography-level(10px, 112px, 300),
+  $display-3:     mat-typography-level(10px, 56px, 400),
   $display-2:     mat-typography-level(45px, 48px, 400),
   $display-1:     mat-typography-level(34px, 40px, 400),
-  $headline:      mat-typography-level(97.54px, 32px, 400),
-  $title:         mat-typography-level(61px, 0px, 500),
+  $headline:      mat-typography-level(10.54px, 32px, 400),
+  $title:         mat-typography-level(20px, 0px, 400),
   $subheading-2:  mat-typography-level(49px,0.25px, 400),
-  $subheading-1:  mat-typography-level(34.54px, 0.25px, 400),
+  $subheading-1:  mat-typography-level(20.54px, 0.25px, 400),
   $body-2:        mat-typography-level(14.22px, 0.23px, 500),
   $body-1:        mat-typography-level(16.25px, 20px, 400),
   $caption:       mat-typography-level(12.19px, 1.25px, 400),
@@ -114,7 +156,7 @@ $thea-typography: mat-typography-config(
 */
 
 // Include the default theme styles.
-@include angular-material-theme($theahoel-theme);
+@include angular-material-theme($news-portal-theme);
 
 /*@include navtabs-component($theahoel-theme);
 
